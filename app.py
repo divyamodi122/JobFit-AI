@@ -228,10 +228,8 @@ if analyze_btn:
                         st.stop()
                 else:
                     
-                    import sys, os
-                    sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
-                    from extractor import extract_skills_from_pdf, extract_skills_from_text
-                    from scorer import get_overall_score, get_fit_level, get_recommendations
+                    from src.extractor import extract_skills_from_pdf, extract_skills_from_text
+                    from src.scorer import get_overall_score, get_fit_level, get_recommendations
 
                     import tempfile
                     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
